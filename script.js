@@ -9,9 +9,14 @@ const collectEmployees = function () {
     const firstName = prompt("Please enter emloyee firstname")
     const lastName = prompt("Please enter employee lastname")
     const salary = prompt("Please enter employee salary")
-    employeeData.push({
-      firstName, lastName, salary
-    })
+    if (firstName && lastName && !isNaN(salary)) {
+      employeeData.push({
+        firstName, lastName, salary
+      })
+
+    }else{
+      alert("Please enter valid data")
+    }
     addemployee = confirm("Would you like to add more employees?")
     // TODO: Get user input to create and return an array of employee objects
 
